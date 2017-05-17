@@ -16,6 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Registrar" />
+        <activity android:name=".Lista_Apartamentos" />
+        <activity android:name=".Reportes"></activity>
     </application>
 
 </manifest>

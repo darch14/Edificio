@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Edificio</string>
+    <string name="registrar">Registrar</string>
+    <string name="nomenclatura">Nomenclatura</string>
+    <string name="piso">Piso</string>
+    <string name="metros_cuadrados">Metros Cuadrados</string>
+    <string name="precio">Precio</string>
+    <string name="tiene_balcon">Tiene Balcon</string>
+    <string name="si">Si</string>
+    <string name="no">No</string>
+    <string name="encuantra_sombra">Se encuentra en la sombra</string>
+    <string name="guardar">GUARDAR</string>
+    <string name="modificar">MODIFICAR</string>
+    <string name="eliminar">ELIMINAR</string>
+    <string name="limpiar_campos">Limpiar Campos</string>
 </resources>
