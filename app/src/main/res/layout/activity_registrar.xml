@@ -61,52 +61,54 @@
             android:layout_marginTop="10dp"
             android:text="@string/tiene_balcon" />
 
-        <LinearLayout
+        <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <CheckBox
-                android:id="@+id/chkBalconSi"
+            <RadioButton
+                android:id="@+id/rBalconSi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:checked="true"
                 android:text="@string/si" />
 
-            <CheckBox
-                android:id="@+id/chkBalconNo"
+            <RadioButton
+                android:id="@+id/rBalconNo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/no" />
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="@string/encuantra_sombra" />
+            android:text="@string/encuentra_sombra" />
 
-        <LinearLayout
+        <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <CheckBox
-                android:id="@+id/chkSombraSi"
+            <RadioButton
+                android:id="@+id/rSombraSi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:checked="true"
                 android:text="@string/si" />
 
-            <CheckBox
-                android:id="@+id/chkSombraNo"
+            <RadioButton
+                android:id="@+id/rSombraNo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/no" />
-        </LinearLayout>
+        </RadioGroup>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -117,6 +119,7 @@
                 android:id="@+id/button2"
                 android:layout_width="184dp"
                 android:layout_height="wrap_content"
+                android:onClick="guardar"
                 android:text="@string/guardar" />
 
             <Button

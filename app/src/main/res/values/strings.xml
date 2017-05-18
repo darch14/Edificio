@@ -6,11 +6,26 @@
     <string name="metros_cuadrados">Metros Cuadrados</string>
     <string name="precio">Precio</string>
     <string name="tiene_balcon">Tiene Balcon</string>
+    <string name="no_tiene_balcon">No tiene Balcon</string>
     <string name="si">Si</string>
     <string name="no">No</string>
-    <string name="encuantra_sombra">Se encuentra en la sombra</string>
+    <string name="encuentra_sombra">Se encuentra en la sombra</string>
+    <string name="no_encuentra_sombra">No se encuentra en la sombra</string>
     <string name="guardar">GUARDAR</string>
     <string name="modificar">MODIFICAR</string>
     <string name="eliminar">ELIMINAR</string>
     <string name="limpiar_campos">Limpiar Campos</string>
+    <string name="Apartamentos">Apartamentos</string>
+    <string name="reportes">Reportes</string>
+    <string-array name="opciontes_principal">
+        <item>@string/registrar</item>
+        <item>@string/Apartamentos</item>
+        <item>@string/reportes</item>
+    </string-array>
+    <string name="error_nomenclatura">Dijite la nomenclatura</string>
+    <string name="error_piso">Dijite el piso</string>
+    <string name="error_metros">Dijite los metros cuadrados</string>
+    <string name="error_precio">Dijite el precio</string>
+    <string name="error_nomenclatura_igual">Dijite una nomenclatura diferente</string>
+    <string name="guardado_exitoso">Apartamento Guardada Exitosamente</string>
 </resources>
