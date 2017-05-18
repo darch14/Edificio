@@ -97,4 +97,39 @@ public class Apartamento {
 
         db.close();
     }
+
+    public void eliminar(Context contexto){
+        //declarar las variables
+        String sql;
+        SQLiteDatabase db;
+
+        //Abrir ña conexión de base de datos en modo escritura
+        ApartamentosSQLiteOpenHelper aux=new ApartamentosSQLiteOpenHelper(contexto,"DBApartamentos",null,1);
+        db=aux.getWritableDatabase();
+
+        sql="DELETE FROM Apartamentos where nomenclatura ='"+this.getNomenclatura()+"'";
+        db.execSQL(sql);
+
+        db.close();
+    }
+
+    public void modificar(Context contexto){
+        //declarar las variables
+        String sql;
+        SQLiteDatabase db;
+
+        //Abrir ña conexión de base de datos en modo escritura
+        ApartamentosSQLiteOpenHelper aux=new ApartamentosSQLiteOpenHelper(contexto,"DBApartamentos",null,1);
+        db=aux.getWritableDatabase();
+
+        sql="UPDATE Apartamentos SET piso ='"+this.getPiso()
+                +"',metros='"+this.getMetros()
+                +"',precio='"+this.getPrecio()
+                +"',balcon='"+this.getBalcon()
+                +"',sombra='"+this.getSombra()
+                +"'where nomenclatura='"+this.getNomenclatura()+"'";
+        db.execSQL(sql);
+
+        db.close();
+    }
 }

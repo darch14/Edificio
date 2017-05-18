@@ -28,4 +28,11 @@
     <string name="error_precio">Dijite el precio</string>
     <string name="error_nomenclatura_igual">Dijite una nomenclatura diferente</string>
     <string name="guardado_exitoso">Apartamento Guardada Exitosamente</string>
+    <string name="eliminado_exitoso">Apartamento Eliminado Exitosamente</string>
+    <string name="modificado_exitoso">Apartamento Modificado Exitosamente</string>
+    <string name="confirmacion">Confirmacion</string>
+    <string name="mensaje_eliminacion">¿Esta seguro que desea eliminar esta perona?</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="buscar">BUSCAR</string>
 </resources>

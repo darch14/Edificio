@@ -40,4 +40,32 @@ public class Datos {
         db.close();
         return apartamentos;
     }
+
+    public static Apartamento buscarApartamentos(Context contexto,String nom){
+        SQLiteDatabase db;
+        String sql,foto,nomenclatura,piso,metros,precio,balcon,sombra;
+        Apartamento a=null;
+
+        ApartamentosSQLiteOpenHelper aux=new ApartamentosSQLiteOpenHelper(contexto,"DBApartamentos",null,1);
+        db=aux.getReadableDatabase();
+
+        sql="Select * from Apartamentos where nomenclatura ='"+nom+"'";
+        Cursor c=db.rawQuery(sql,null);
+
+        if (c.moveToFirst()){
+            foto=c.getString(0);
+            nomenclatura=c.getString(1);
+            piso=c.getString(2);
+            metros=c.getString(3);
+            precio=c.getString(4);
+            balcon=c.getString(5);
+            sombra=c.getString(6);
+            a=new Apartamento(foto,nomenclatura,piso,metros,precio,balcon,sombra);
+
+        }
+
+        db.close();
+        return a;
+    }
+
 }
