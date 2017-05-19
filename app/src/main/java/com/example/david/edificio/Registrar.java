@@ -36,22 +36,24 @@ public class Registrar extends AppCompatActivity {
     public void guardar(View v){
         if (validar()){
             if (validarNomenclaturaExistente()){
-                String foto,nomenclatura,piso,metros,precio,balcon,sombra;
-                Apartamento apartamento;
-                foto=String.valueOf(fotoAleatoria());
-                nomenclatura=cajaNomenclatura.getText().toString();
-                piso=cajaPiso.getText().toString();
-                metros=cajaMetros.getText().toString();
-                precio=cajaPrecio.getText().toString();
-                if (rBalconSi.isChecked())balcon=res.getString(R.string.tiene_balcon);
-                else balcon=res.getString(R.string.no_tiene_balcon);
-                if (rSombraSi.isChecked())sombra=res.getString(R.string.encuentra_sombra);
-                else sombra=res.getString(R.string.no_encuentra_sombra);
+                if (validarPiso()){
+                    String foto,nomenclatura,piso,metros,precio,balcon,sombra;
+                    Apartamento apartamento;
+                    foto=String.valueOf(fotoAleatoria());
+                    nomenclatura=cajaNomenclatura.getText().toString();
+                    piso=cajaPiso.getText().toString();
+                    metros=cajaMetros.getText().toString();
+                    precio=cajaPrecio.getText().toString();
+                    if (rBalconSi.isChecked())balcon=res.getString(R.string.tiene_balcon);
+                    else balcon=res.getString(R.string.no_tiene_balcon);
+                    if (rSombraSi.isChecked())sombra=res.getString(R.string.encuentra_sombra);
+                    else sombra=res.getString(R.string.no_encuentra_sombra);
 
-                apartamento=new Apartamento(foto,nomenclatura,piso,metros,precio,balcon,sombra);
-                apartamento.guardar(getApplicationContext());
-                Toast.makeText(getApplicationContext(), res.getString(R.string.guardado_exitoso),Toast.LENGTH_SHORT).show();
-                limpiar();
+                    apartamento=new Apartamento(foto,nomenclatura,piso,metros,precio,balcon,sombra);
+                    apartamento.guardar(getApplicationContext());
+                    Toast.makeText(getApplicationContext(), res.getString(R.string.guardado_exitoso),Toast.LENGTH_SHORT).show();
+                    limpiar();
+                }
             }
         }
 
@@ -85,6 +87,21 @@ public class Registrar extends AppCompatActivity {
         int foto[]={R.drawable.imagren1,R.drawable.imagen2,R.drawable.imagen3};
         int numero=(int)(Math.random()*3);
         return foto[numero];
+    }
+
+    public boolean validarPiso(){
+        ArrayList<Apartamento> a=Datos.traerApartamentos(getApplicationContext());
+        String piso=cajaPiso.getText().toString();
+        int cont=0;
+        for (int i=0;i<a.size();i++){
+            if (a.get(i).getPiso().equals(piso))cont=cont+1;
+        }
+        if (cont>=3){
+            cajaPiso.setError("lalla");
+            cajaPiso.requestFocus();
+            return false;
+        }
+        return true;
     }
 
     public boolean validarNomenclaturaExistente(){

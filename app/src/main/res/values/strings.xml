@@ -22,22 +22,22 @@
         <item>@string/Apartamentos</item>
         <item>@string/reportes</item>
     </string-array>
-    <string name="error_nomenclatura">Dijite la nomenclatura</string>
-    <string name="error_piso">Dijite el piso</string>
-    <string name="error_metros">Dijite los metros cuadrados</string>
-    <string name="error_precio">Dijite el precio</string>
-    <string name="error_nomenclatura_igual">Dijite una nomenclatura diferente</string>
+    <string name="error_nomenclatura">Digite la nomenclatura</string>
+    <string name="error_piso">Digite el piso</string>
+    <string name="error_metros">Digite los metros cuadrados</string>
+    <string name="error_precio">Digite el precio</string>
+    <string name="error_nomenclatura_igual">Digite una nomenclatura diferente</string>
     <string name="guardado_exitoso">Apartamento Guardada Exitosamente</string>
     <string name="eliminado_exitoso">Apartamento Eliminado Exitosamente</string>
     <string name="modificado_exitoso">Apartamento Modificado Exitosamente</string>
     <string name="confirmacion">Confirmacion</string>
-    <string name="mensaje_eliminacion">¿Esta seguro que desea eliminar esta perona?</string>
+    <string name="mensaje_eliminacion">¿Esta seguro que desea eliminar este Apartamento?</string>
     <string name="confirmar">Confirmar</string>
     <string name="cancelar">Cancelar</string>
     <string name="buscar">BUSCAR</string>
     <string name="reporte_1">Cuantos apartamentos se encuentran en la sombra y tienen balcon</string>
-    <string name="reporte_2">Piso en el que se encuentra el apartamneto mas caro</string>
-    <string name="reporte_3">Nomenclatura y metros cuadrado del apartamento com mayor tamaño en todo el edificio</string>
+    <string name="reporte_2">Piso en el que se encuentra el apartamento mas caro</string>
+    <string name="reporte_3">Nomenclatura y metros cuadrado del apartamento con mayor tamaño en todo el edificio</string>
     <string name="reporte_4">Promedio de tamaño de los apartamentos por Piso</string>
     <string-array name="opciones_reportes">
         <item>@string/reporte_1</item>

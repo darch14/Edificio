@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Edificio</string>
+    <string name="Apartamentos">Apartments</string>
+    <string name="apartamento_caro">The Most Expensive Apartment Is On The Floor</string>
+    <string name="buscar">SEARCH</string>
+    <string name="cancelar">Cancel</string>
+    <string name="con_balcon">With balcony</string>
+    <string name="con_balcon_sombra">With balcony and with shade</string>
+    <string name="con_sombra">With shade</string>
+    <string name="confirmacion">Confirmation</string>
+    <string name="confirmar">Confirm</string>
+    <string name="eliminado_exitoso">Successfully Deleted Apartment</string>
+    <string name="eliminar">DELETE</string>
+    <string name="encuentra_sombra">Is in the shade</string>
+    <string name="error_metros">Enter the square meters</string>
+    <string name="error_nomenclatura">Enter the nomenclature</string>
+    <string name="error_nomenclatura_igual">Please enter a different nomenclature</string>
+    <string name="error_piso">Enter the floor</string>
+    <string name="error_precio">Enter price</string>
+    <string name="guardado_exitoso">Apartment Guarded Successfully</string>
+    <string name="guardar">SAVE</string>
+    <string name="limpiar_campos">Clean fields</string>
+    <string name="mensaje_eliminacion">Are you sure you want to delete this apartment?</string>
+    <string name="metros_cuadrados">Square meter</string>
+    <string name="modificado_exitoso">Successfully Modified Apartment</string>
+    <string name="modificar">MODIFY</string>
+    <string name="no">No</string>
+    <string name="no_encuentra_sombra">Not in the shade</string>
+    <string name="no_tiene_balcon">Does not have a balcony</string>
+    <string name="nomenclatura">Nomenclature</string>
+    <string name="piso">Floor</string>
+    <string name="precio">Price</string>
+    <string name="promedio">Average</string>
+    <string name="registrar">Register</string>
+    <string name="reporte_1">How many apartments are in the shade and have a balcony</string>
+    <string name="reporte_2">Floor in which is the most expensive apartment</string>
+    <string name="reporte_3">Nomenclature and square meters of the largest apartment in the whole building</string>
+    <string name="reporte_4">Average size of apartments per floor</string>
+    <string name="reportes">Reports</string>
+    <string name="si">Yes</string>
+    <string name="tiene_balcon">Has a balcony</string>
+</resources>
