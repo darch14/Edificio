@@ -35,4 +35,19 @@
     <string name="confirmar">Confirmar</string>
     <string name="cancelar">Cancelar</string>
     <string name="buscar">BUSCAR</string>
+    <string name="reporte_1">Cuantos apartamentos se encuentran en la sombra y tienen balcon</string>
+    <string name="reporte_2">Piso en el que se encuentra el apartamneto mas caro</string>
+    <string name="reporte_3">Nomenclatura y metros cuadrado del apartamento com mayor tamaño en todo el edificio</string>
+    <string name="reporte_4">Promedio de tamaño de los apartamentos por Piso</string>
+    <string-array name="opciones_reportes">
+        <item>@string/reporte_1</item>
+        <item>@string/reporte_2</item>
+        <item>@string/reporte_3</item>
+        <item>@string/reporte_4</item>
+    </string-array>
+    <string name="con_balcon">Con Balcon</string>
+    <string name="con_sombra">Con Sombra</string>
+    <string name="con_balcon_sombra">Con Balcon y Con Sombra</string>
+    <string name="apartamento_caro">El Apartamento Mas Caro Esta En El Piso</string>
+    <string name="promedio">Promedio</string>
 </resources>
