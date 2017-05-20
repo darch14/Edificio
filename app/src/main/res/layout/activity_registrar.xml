@@ -44,13 +44,18 @@
                 android:text="@string/buscar" />
         </LinearLayout>
 
-        <EditText
-            android:id="@+id/txtPiso"
+        <TextView
+            android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/piso"
-            android:inputType="number" />
+            android:layout_marginTop="20dp"
+            android:text="@string/piso"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/cmdPiso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <EditText
             android:id="@+id/txtMetrosCuadrados"
@@ -141,6 +146,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="modificar"
                 android:text="@string/modificar" />
         </LinearLayout>
 

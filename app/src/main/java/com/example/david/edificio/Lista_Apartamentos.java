@@ -19,7 +19,7 @@ public class Lista_Apartamentos extends AppCompatActivity {
 
         ls=(ListView)findViewById(R.id.lsApartamentos);
         apartamentos=Datos.traerApartamentos(getApplicationContext());
-        adapter=new AdaptadorApartamentos(getApplicationContext(),apartamentos);
+        adapter=new AdaptadorApartamentos(getApplicationContext(),apartamentos,getResources().getStringArray(R.array.opciones_lista_personalizada));
         ls.setAdapter(adapter);
     }
 }

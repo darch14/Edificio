@@ -18,10 +18,12 @@ import java.util.ArrayList;
 public class AdaptadorApartamentos extends BaseAdapter{
     private Context contexto;
     private ArrayList<Apartamento> apartamentos;
+    private String[] tirulos;
 
-    public AdaptadorApartamentos(Context contexto, ArrayList<Apartamento> apartamentos) {
+    public AdaptadorApartamentos(Context contexto, ArrayList<Apartamento> apartamentos, String[] tirulos) {
         this.contexto = contexto;
         this.apartamentos = apartamentos;
+        this.tirulos = tirulos;
     }
 
     @Override
@@ -36,7 +38,7 @@ public class AdaptadorApartamentos extends BaseAdapter{
 
     @Override
     public long getItemId(int position) {
-        return Long.parseLong(apartamentos.get(position).getNomenclatura());
+        return 0;
     }
 
     @Override
@@ -62,10 +64,10 @@ public class AdaptadorApartamentos extends BaseAdapter{
 
         //Pasar la informacion
         foto.setImageResource(Integer.parseInt(apartamentos.get(position).getFoto()));
-        cajaNomenclatura.setText(apartamentos.get(position).getNomenclatura());
-        cajaPiso.setText(apartamentos.get(position).getPiso());
-        cajaMetros.setText(apartamentos.get(position).getMetros());
-        cajaPrecio.setText(apartamentos.get(position).getPrecio());
+        cajaNomenclatura.setText(tirulos[0]+": "+apartamentos.get(position).getNomenclatura());
+        cajaPiso.setText(tirulos[1]+": "+apartamentos.get(position).getPiso());
+        cajaMetros.setText(tirulos[2]+": "+apartamentos.get(position).getMetros());
+        cajaPrecio.setText(tirulos[3]+": $"+apartamentos.get(position).getPrecio());
         cajaBalcon.setText(apartamentos.get(position).getBalcon());
         cajaSombras.setText(apartamentos.get(position).getSombra());
 

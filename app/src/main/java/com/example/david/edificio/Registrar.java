@@ -6,16 +6,21 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class Registrar extends AppCompatActivity {
-    private EditText cajaNomenclatura,cajaPiso,cajaMetros,cajaPrecio;
+    private EditText cajaNomenclatura,cajaMetros,cajaPrecio;
     private RadioButton rBalconSi,rBalconNo,rSombraSi,rSombraNo;
+    private Spinner comboPiso;
     private Resources res;
+    private String[] opc;
+    private ArrayAdapter<String> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,13 +29,16 @@ public class Registrar extends AppCompatActivity {
 
         res=this.getResources();
         cajaNomenclatura=(EditText)findViewById(R.id.txtNomenclatura);
-        cajaPiso=(EditText)findViewById(R.id.txtPiso);
         cajaMetros=(EditText)findViewById(R.id.txtMetrosCuadrados);
         cajaPrecio=(EditText)findViewById(R.id.txtPrecio);
         rBalconSi=(RadioButton)findViewById(R.id.rBalconSi);
         rBalconNo=(RadioButton)findViewById(R.id.rBalconNo);
         rSombraSi=(RadioButton)findViewById(R.id.rSombraSi);
         rSombraNo=(RadioButton)findViewById(R.id.rSombraNo);
+        comboPiso=(Spinner)findViewById(R.id.cmdPiso);
+        opc=res.getStringArray(R.array.opciones_piso);
+        adapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,opc);
+        comboPiso.setAdapter(adapter);
     }
 
     public void guardar(View v){
@@ -41,7 +49,7 @@ public class Registrar extends AppCompatActivity {
                     Apartamento apartamento;
                     foto=String.valueOf(fotoAleatoria());
                     nomenclatura=cajaNomenclatura.getText().toString();
-                    piso=cajaPiso.getText().toString();
+                    piso=comboPiso.getSelectedItem().toString();
                     metros=cajaMetros.getText().toString();
                     precio=cajaPrecio.getText().toString();
                     if (rBalconSi.isChecked())balcon=res.getString(R.string.tiene_balcon);
@@ -65,11 +73,6 @@ public class Registrar extends AppCompatActivity {
             cajaNomenclatura.requestFocus();
             return false;
         }
-        if (cajaPiso.getText().toString().isEmpty()){
-            cajaPiso.setError(res.getString(R.string.error_piso));
-            cajaPiso.requestFocus();
-            return false;
-        }
         if (cajaMetros.getText().toString().isEmpty()){
             cajaMetros.setError(res.getString(R.string.error_metros));
             cajaMetros.requestFocus();
@@ -91,14 +94,14 @@ public class Registrar extends AppCompatActivity {
 
     public boolean validarPiso(){
         ArrayList<Apartamento> a=Datos.traerApartamentos(getApplicationContext());
-        String piso=cajaPiso.getText().toString();
+        String piso=comboPiso.getSelectedItem().toString();
         int cont=0;
         for (int i=0;i<a.size();i++){
             if (a.get(i).getPiso().equals(piso))cont=cont+1;
         }
         if (cont>=3){
-            cajaPiso.setError("lalla");
-            cajaPiso.requestFocus();
+            Toast.makeText(getApplicationContext(),res.getString(R.string.error_piso),
+                    Toast.LENGTH_SHORT).show();
             return false;
         }
         return true;
@@ -130,7 +133,12 @@ public class Registrar extends AppCompatActivity {
         if (validarNomenclatura()){
             a=Datos.buscarApartamentos(getApplicationContext(),cajaNomenclatura.getText().toString());
             if (a!=null){
-                cajaPiso.setText(a.getPiso());
+                if (a.getPiso().equalsIgnoreCase(res.getString(R.string.uno)))comboPiso.setSelection(0);
+                if (a.getPiso().equalsIgnoreCase(res.getString(R.string.dos)))comboPiso.setSelection(1);
+                if (a.getPiso().equalsIgnoreCase(res.getString(R.string.tres)))comboPiso.setSelection(2);
+                if (a.getPiso().equalsIgnoreCase(res.getString(R.string.cuatro)))comboPiso.setSelection(3);
+                if (a.getPiso().equalsIgnoreCase(res.getString(R.string.cinco)))comboPiso.setSelection(4);
+
                 cajaMetros.setText(a.getMetros());
                 cajaPrecio.setText(a.getPrecio());
 
@@ -180,7 +188,7 @@ public class Registrar extends AppCompatActivity {
 
     public void limpiar(){
         cajaNomenclatura.setText("");
-        cajaPiso.setText("");
+        comboPiso.setSelection(0);
         cajaMetros.setText("");
         cajaPrecio.setText("");
         rBalconSi.setChecked(true);
@@ -194,7 +202,7 @@ public class Registrar extends AppCompatActivity {
         if (validarNomenclatura()){
             a=Datos.buscarApartamentos(getApplicationContext(),cajaNomenclatura.getText().toString());
             if (a!=null){
-                piso=cajaPiso.getText().toString();
+                piso=comboPiso.getSelectedItem().toString();
                 metros=cajaMetros.getText().toString();
                 precio=cajaPrecio.getText().toString();
 

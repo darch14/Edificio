@@ -23,7 +23,7 @@
         <item>@string/reportes</item>
     </string-array>
     <string name="error_nomenclatura">Digite la nomenclatura</string>
-    <string name="error_piso">Digite el piso</string>
+    <string name="error_piso">Ya existen tres apartamentos en este piso</string>
     <string name="error_metros">Digite los metros cuadrados</string>
     <string name="error_precio">Digite el precio</string>
     <string name="error_nomenclatura_igual">Digite una nomenclatura diferente</string>
@@ -45,9 +45,27 @@
         <item>@string/reporte_3</item>
         <item>@string/reporte_4</item>
     </string-array>
+    <string name="uno">1</string>
+    <string name="dos">2</string>
+    <string name="tres">3</string>
+    <string name="cuatro">4</string>
+    <string name="cinco">5</string>
+    <string-array name="opciones_piso">
+        <item>@string/uno</item>
+        <item>@string/dos</item>
+        <item>@string/tres</item>
+        <item>@string/cuatro</item>
+        <item>@string/cinco</item>
+    </string-array>
     <string name="con_balcon">Con Balcon</string>
     <string name="con_sombra">Con Sombra</string>
     <string name="con_balcon_sombra">Con Balcon y Con Sombra</string>
     <string name="apartamento_caro">El Apartamento Mas Caro Esta En El Piso</string>
     <string name="promedio">Promedio</string>
+    <string-array name="opciones_lista_personalizada">
+        <item>@string/nomenclatura</item>
+        <item>@string/piso</item>
+        <item>@string/metros_cuadrados</item>
+        <item>@string/precio</item>
+    </string-array>
 </resources>

@@ -16,7 +16,7 @@
     <string name="error_metros">Enter the square meters</string>
     <string name="error_nomenclatura">Enter the nomenclature</string>
     <string name="error_nomenclatura_igual">Please enter a different nomenclature</string>
-    <string name="error_piso">Enter the floor</string>
+    <string name="error_piso">There are already three apartments on this floor</string>
     <string name="error_precio">Enter price</string>
     <string name="guardado_exitoso">Apartment Guarded Successfully</string>
     <string name="guardar">SAVE</string>
@@ -40,4 +40,9 @@
     <string name="reportes">Reports</string>
     <string name="si">Yes</string>
     <string name="tiene_balcon">Has a balcony</string>
+    <string name="cinco">5</string>
+    <string name="cuatro">4</string>
+    <string name="dos">2</string>
+    <string name="tres">3</string>
+    <string name="uno">1</string>
 </resources>
